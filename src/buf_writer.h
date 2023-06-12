@@ -78,7 +78,7 @@ int _BufWriter_write(BufWriter *bw);
  * @param br A pointer to a buffered writer.
  * @param count The size of `buf`.
  * @param buf A pointer to the buffer to read from.
- * @return The quantity of chars read from buf and written to a file.
+ * @return The quantity of chars read from buf and written to the internal buffer.
  */
 size_t BufWriter_puts(BufWriter *bw, size_t count, char *buf);
 
