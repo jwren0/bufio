@@ -1,3 +1,10 @@
+/**
+ * A file containing the source code for BufWriter functions.
+ *
+ * @author  jwren0
+ * @version 2023-06-12
+ */
+
 #include "buf_writer.h"
 
 int BufWriter_init(BufWriter *bw, FILE *f) {
@@ -91,6 +98,8 @@ void BufWriter_close(BufWriter *bw) {
     if (bw == NULL || bw->buf == NULL) {
         return;
     }
+
+    _BufWriter_write(bw);
 
     free(bw->buf);
     bw->buf = NULL;

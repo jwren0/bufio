@@ -1,6 +1,14 @@
 #ifndef BUFIO_BUF_WRITER_H
 #define BUFIO_BUF_WRITER_H
 
+/**
+ * A file containing typdefs and documentation
+ * for BufWriter.
+ *
+ * @author  jwren0
+ * @version 2023-06-12
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
