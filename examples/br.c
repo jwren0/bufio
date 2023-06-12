@@ -33,7 +33,7 @@ int main(void) {
 
     // Try initializing BufReader
     if (BufReader_init(&br, f) != 0) {
-        fprintf(stderr, "Failed initializing BufReader");
+        fprintf(stderr, "Failed initializing BufReader\n");
         goto cleanup;
     }
 
@@ -44,7 +44,7 @@ int main(void) {
 
     // Check if EOF was reached
     if (feof(f) == 0) {
-        fprintf(stderr, "Failed to reach EOF");
+        fprintf(stderr, "Failed to reach EOF\n");
         goto cleanup;
     }
 
