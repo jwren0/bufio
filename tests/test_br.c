@@ -2,7 +2,7 @@
  * A file containing some basic tests for BufReader.
  *
  * @author  jwren0
- * @version 2023-06-02
+ * @version 2023-06-12
  */
 
 #include "../src/buf_reader.h"
@@ -15,7 +15,7 @@ void test_init_sized_close(void) {
     int actual;
     const size_t BUF_SIZE = 1024;
     BufReader br;
-    FILE *f = fopen(TEST_FILE, "r");
+    FILE *f = fopen(TESTR_FILE, "r");
     focheck(f);
 
     actual = BufReader_init_sized(&br, f, BUF_SIZE);
@@ -66,7 +66,7 @@ void test_init_sized_close(void) {
 void test_init(void) {
     int actual;
     BufReader br;
-    FILE *f = fopen(TEST_FILE, "r");
+    FILE *f = fopen(TESTR_FILE, "r");
     focheck(f);
 
     actual = BufReader_init(&br, f);
@@ -127,12 +127,12 @@ void test_read(void) {
     size_t expected_len = ARRAY_LEN(expected_count);
     size_t BUF_SIZE = 17;
     BufReader br;
-    FILE *f = fopen(TEST_FILE, "r");
+    FILE *f = fopen(TESTR_FILE, "r");
     focheck(f);
 
     actual = BufReader_init_sized(&br, f, BUF_SIZE);
     assert_eq(
-        "[test_read] BufReader_init",
+        "[test_read] BufReader_init_sized",
         0, actual
     );
 
@@ -170,7 +170,7 @@ void test_getc(void) {
     char c;
     size_t expected_len = strlen(expected);
     BufReader br;
-    FILE *f = fopen(TEST_FILE, "r");
+    FILE *f = fopen(TESTR_FILE, "r");
     focheck(f);
 
     actual = BufReader_init(&br, f);
@@ -218,7 +218,7 @@ void test_gets(void) {
     size_t expected_len = strlen(expected);
     char buf[expected_len + 1];
     BufReader br;
-    FILE *f = fopen(TEST_FILE, "r");
+    FILE *f = fopen(TESTR_FILE, "r");
     focheck(f);
 
     actual = BufReader_init(&br, f);

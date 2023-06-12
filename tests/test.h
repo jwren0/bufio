@@ -5,10 +5,11 @@
  * A file containing some test macros.
  *
  * @author  jwren0
- * @version 2023-06-02
+ * @version 2023-06-12
  */
 
-#define TEST_FILE "tests/test.txt"
+#define TESTR_FILE "tests/test_br.txt"
+#define TESTW_FILE "tests/test_bw.txt"
 
 #define ARRAY_LEN(a) sizeof(a)/sizeof(*a);
 
