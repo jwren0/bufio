@@ -18,6 +18,8 @@
  */
 
 #include <stdio.h>
+#include <string.h>
+
 #include "../src/buf_writer.h"
 
 int main(void) {
@@ -41,7 +43,7 @@ int main(void) {
     // Keep writing chars until unable to
     for (size_t i = 0; i < content_len; i++) {
         if (BufWriter_putc(&bw, content[i]) != 0) {
-            fprintf(stderr, "Failed writing character '%c' to buffer", content[i]);
+            fprintf(stderr, "Failed writing character '%c' to buffer\n", content[i]);
             goto cleanup;
         }
     }

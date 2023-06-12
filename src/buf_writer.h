@@ -46,7 +46,7 @@ typedef struct {
 /**
  * Initializes a BufWriter.
  *
- * @param br The buffered writer to initialize
+ * @param br The buffered writer to initialize.
  * @param f The file stream to write to.
  * @return zero on success, non-zero otherwise.
  */
@@ -86,7 +86,7 @@ size_t BufWriter_puts(BufWriter *bw, size_t count, char *buf);
  * Writes a char to a file.
  *
  * @param br A pointer to a buffered writer.
- * @param c The char to write
+ * @param c The char to write.
  * @return zero on success, non-zero otherwise
  */
 int BufWriter_putc(BufWriter *bw, char c);

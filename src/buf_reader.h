@@ -6,7 +6,7 @@
  * for BufReader.
  *
  * @author  jwren0
- * @version 2023-06-02
+ * @version 2023-06-12
  */
 
 #include <stdio.h>
@@ -51,7 +51,7 @@ typedef struct {
 /**
  * Initializes a BufReader.
  *
- * @param br The buffered reader to initialize
+ * @param br The buffered reader to initialize.
  * @param f The file stream to read from.
  * @return zero on success, non-zero otherwise.
  */
@@ -91,8 +91,8 @@ size_t BufReader_gets(BufReader *br, size_t count, char *buf);
  * Reads a char from a file.
  *
  * @param br A pointer to a buffered reader.
- * @param c A pointer to the char to write to
- * @return zero on success, non-zero otherwise
+ * @param c A pointer to the char to write to.
+ * @return zero on success, non-zero otherwise.
  */
 int BufReader_getc(BufReader *br, char *c);
 

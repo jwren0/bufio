@@ -18,6 +18,7 @@
  */
 
 #include <stdio.h>
+
 #include "../src/buf_reader.h"
 
 int main(void) {
