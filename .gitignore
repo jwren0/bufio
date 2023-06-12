@@ -1,4 +1,5 @@
 libbufio_debug.so
+tests/test_bw.txt
 libbufio.*
 **/*.o
 tests/*[^.(c|h|(txt))]

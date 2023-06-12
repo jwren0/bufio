@@ -24,7 +24,7 @@ SRC_FILES := src/buf_reader.c src/buf_writer.c
 HEAD_FILES := src/buf_reader.h src/buf_writer.h
 OBJ_FILES := ${SRC_FILES:.c=.o}
 
-SRC_TESTS := tests/test_br.c
+SRC_TESTS := tests/test_br.c tests/test_bw.c
 OBJ_TESTS := ${SRC_TESTS:%.c=%}
 
 
