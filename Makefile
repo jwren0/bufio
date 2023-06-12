@@ -20,8 +20,8 @@ INC_DIR := $(INC_DIR)/$(LIB)
 
 LIB := lib$(LIB)
 
-SRC_FILES := src/buf_reader.c
-HEAD_FILES := src/buf_reader.h
+SRC_FILES := src/buf_reader.c src/buf_writer.c
+HEAD_FILES := src/buf_reader.h src/buf_writer.h
 OBJ_FILES := ${SRC_FILES:.c=.o}
 
 SRC_TESTS := tests/test_br.c
